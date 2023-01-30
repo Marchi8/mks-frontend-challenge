@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const FooterStyle = styled.aside`
+const FooterStyle = styled.footer`
     background-color: blue;
 `
 

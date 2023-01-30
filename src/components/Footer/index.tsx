@@ -4,7 +4,7 @@ import { FooterStyle } from "./styles"
 const Footer = () => {
     return (
         <FooterStyle>
-            <p>Footer Here</p>
+            <p>MKS Sistemas © Todos os direitos reservados</p>
         </FooterStyle>
     )
 }
