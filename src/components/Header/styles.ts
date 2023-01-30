@@ -11,7 +11,6 @@ const HeaderStyle = styled.aside`
     
     @media(min-width:1000px) {
         height: 101px;
-        // gap: 0px;
         justify-content: space-between;
     }
 
@@ -54,7 +53,8 @@ const HeaderStyle = styled.aside`
         font-family: 'Montserrat';
         font-style: normal;
         font-weight: 700;
-        font-size: 12px;
+        font-size: 13px;
+        gap: 10px;
         
         @media(min-width:1000px) {
             width: 90px;
@@ -63,6 +63,14 @@ const HeaderStyle = styled.aside`
             gap: 15px;
             margin-right: 65px;
         }
+    }
+
+    button:hover{
+        cursor: pointer;
+        cursor: pointer;
+        background-color: black;
+        border: 1px solid black;
+        color: white;
     }
 
     span{
