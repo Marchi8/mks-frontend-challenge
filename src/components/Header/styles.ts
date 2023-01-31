@@ -55,6 +55,14 @@ const HeaderStyle = styled.aside`
         font-weight: 700;
         font-size: 13px;
         gap: 10px;
+
+        :hover{
+            cursor: pointer;
+            cursor: pointer;
+            background-color: black;
+            border: 1px solid black;
+            color: white;
+        }
         
         @media(min-width:1000px) {
             width: 90px;
@@ -63,14 +71,6 @@ const HeaderStyle = styled.aside`
             gap: 15px;
             margin-right: 65px;
         }
-    }
-
-    button:hover{
-        cursor: pointer;
-        cursor: pointer;
-        background-color: black;
-        border: 1px solid black;
-        color: white;
     }
 
     span{

@@ -27,15 +27,6 @@ const Cart = () => {
                             <span>R$399</span>
                         </div>
                     </CartProduct>
-                    {/* <CartProduct>
-                        <button>X</button>
-                        <img src="https://a-static.mlcdn.com.br/800x560/apple-watch-series-3-gps-38mm-caixa-prateada-aluminio-pulseira-esportiva-branca/magazineluiza/221516100/8470884401472de39dfa9f9d379e0cc9.jpg" alt="" />
-                        <p>Título</p>
-                        <div>
-                            <p>- 1 +</p>
-                            <span>R$399</span>
-                        </div>
-                    </CartProduct>
                     <CartProduct>
                         <button>X</button>
                         <img src="https://a-static.mlcdn.com.br/800x560/apple-watch-series-3-gps-38mm-caixa-prateada-aluminio-pulseira-esportiva-branca/magazineluiza/221516100/8470884401472de39dfa9f9d379e0cc9.jpg" alt="" />
@@ -53,7 +44,16 @@ const Cart = () => {
                             <p>- 1 +</p>
                             <span>R$399</span>
                         </div>
-                    </CartProduct> */}
+                    </CartProduct>
+                    <CartProduct>
+                        <button>X</button>
+                        <img src="https://a-static.mlcdn.com.br/800x560/apple-watch-series-3-gps-38mm-caixa-prateada-aluminio-pulseira-esportiva-branca/magazineluiza/221516100/8470884401472de39dfa9f9d379e0cc9.jpg" alt="" />
+                        <p>Título</p>
+                        <div>
+                            <p>- 1 +</p>
+                            <span>R$399</span>
+                        </div>
+                    </CartProduct>
                 </ul>
                 <section>
                     <main>

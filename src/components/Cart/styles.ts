@@ -117,6 +117,10 @@ const CartStyle = styled.aside`
         padding: 20px;
         height: 75vh;
 
+        ::-webkit-scrollbar-track {
+            background: #0F52BA;
+        }
+
         @media(min-width:1000px) {
             height: 80vh;
         }

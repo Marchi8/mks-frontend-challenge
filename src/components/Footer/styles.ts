@@ -7,6 +7,8 @@ const FooterStyle = styled.footer`
     height: 34px;
     font-weight: 400;
     font-size: 12px;
+    position: fixed;
+    bottom: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
