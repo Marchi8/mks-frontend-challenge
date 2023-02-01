@@ -1,10 +1,20 @@
 "use client"
-import { CartContext } from "@/context/CartContext"
+import { CartContext, ICartProducts } from "@/context/CartContext"
 import { useContext } from "react"
-import { CartProduct, CartStyle } from "./styles"
+import { CartProduct, CartStyle, EmptyCart } from "./styles"
+import { AiFillShopping } from "react-icons/ai"
 
 const Cart = () => {
-    const { opened, setOpened } = useContext(CartContext)
+    const {
+        opened,
+        setOpened,
+        cartProducts,
+        total,
+        increaseQuantityFunc,
+        decreaseQuantityFunc,
+        removeProductFunc
+    } = useContext(CartContext)
+
     return (
         opened ?
             <CartStyle>
@@ -16,41 +26,38 @@ const Cart = () => {
                     <button onClick={() => setOpened(false)}>X</button>
                 </div>
                 <ul>
-                    <CartProduct>
-                        <button className="remove-button">x</button>
-                        <img src="https://a-static.mlcdn.com.br/800x560/apple-watch-series-3-gps-38mm-caixa-prateada-aluminio-pulseira-esportiva-branca/magazineluiza/221516100/8470884401472de39dfa9f9d379e0cc9.jpg" alt="" />
-                        <h4>Apple Watch Series 4 GPS</h4>
-                        <aside>
-                            <div>
-                                <button>-</button>
-                                <div className="vertical-line">.</div>
-                                <p>1</p>
-                                <div className="vertical-line">.</div>
-                                <button>+</button>
-                            </div>
-                            <span>R$399</span>
-                        </aside>
-                    </CartProduct>
-                    <CartProduct>
-                        <button className="remove-button">x</button>
-                        <img src="https://a-static.mlcdn.com.br/800x560/apple-watch-series-3-gps-38mm-caixa-prateada-aluminio-pulseira-esportiva-branca/magazineluiza/221516100/8470884401472de39dfa9f9d379e0cc9.jpg" alt="" />
-                        <h4>Apple Watch Series 4 GPS</h4>
-                        <aside>
-                            <div>
-                                <button>-</button>
-                                <div className="vertical-line">.</div>
-                                <p>1</p>
-                                <div className="vertical-line">.</div>
-                                <button>+</button>
-                            </div>
-                            <span>R$399</span>
-                        </aside>
-                    </CartProduct>
+                    {cartProducts.length ?
+                        cartProducts.map((product: ICartProducts, index: number) => (
+                            <CartProduct key={index}>
+                                <button onClick={
+                                    () => removeProductFunc(product)
+                                } className="remove-button">x</button>
+                                <img src={product.photo} alt="" />
+                                <h4>{product.name}</h4>
+                                <aside>
+                                    <div>
+                                        <button onClick={() => decreaseQuantityFunc(product)}>-</button>
+                                        <div className="vertical-line">.</div>
+                                        <p>{product.quantity}</p>
+                                        <div className="vertical-line">.</div>
+                                        <button onClick={() => increaseQuantityFunc(product)}>+</button>
+                                    </div>
+                                    <span>
+                                        R${parseInt(product.price).toFixed(0)}
+                                    </span>
+                                </aside>
+                            </CartProduct>
+                        )) :
+                        <EmptyCart>
+                            <h1>Carrinho Vazio</h1>
+                            <h2><AiFillShopping /></h2>
+                        </EmptyCart>
+                    }
                 </ul>
                 <section>
                     <main>
                         <p>Total:</p>
-                        <span>R$ 798</span>
+                        <span>R${total}</span>
                     </main>
                     <button>Finalizar Compra</button>
                 </section>

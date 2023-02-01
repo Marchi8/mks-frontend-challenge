@@ -2,16 +2,13 @@
 import { ProductsStyle } from "./styles"
 import { FiShoppingBag } from "react-icons/fi"
 import { ProductContext } from "@/context/ProductsContext"
-import { useContext, useEffect } from "react"
-import { useDispatch, useSelector } from "react-redux"
-import addProductsThunk from "@/store/modules/products/thunk"
+import { useContext } from "react"
+import { CartContext } from "@/context/CartContext"
 
 const Products = () => {
     const { productsList } = useContext(ProductContext)
-    // const dispatch = useDispatch();
+    const { addProductToCartFunc } = useContext(CartContext)
 
-    // const { products }: any = useSelector((store) => store);
-    // const { products }: any = useSelector((store) => store);
     return (
         <ProductsStyle>
             <ul>
@@ -23,7 +20,7 @@ const Products = () => {
                             <span>R${parseInt(product.price).toFixed(0)}</span>
                         </div>
                         <p>{product.description}</p>
-                        <button><FiShoppingBag /> COMPRAR</button>
+                        <button onClick={() => addProductToCartFunc(product)}><FiShoppingBag />COMPRAR</button>
                     </li>
                 ))}
             </ul>

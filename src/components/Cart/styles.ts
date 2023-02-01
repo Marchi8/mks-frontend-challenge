@@ -187,7 +187,7 @@ const CartProduct = styled.li`
             text-align: center;
             font-size: 12px;
             position: relative;
-            left: 335px;
+            left: 330px;
             margin-right: 0px;
             margin-bottom: 0px;
             margin-top: -90px;
@@ -206,9 +206,10 @@ const CartProduct = styled.li`
         margin-bottom: 20px;
 
         @media(min-width:1000px) {
-            width: 86px;
+            width: 65px;
             height: 57px;
             margin-left: -50px;
+            margin-right: 10px;
             margin-bottom: 0px;
         }
     }
@@ -340,4 +341,13 @@ const CartProduct = styled.li`
     }
 `
 
-export { CartStyle, CartProduct }
+const EmptyCart = styled.section`
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 50px;
+    width: 100vw;
+    height: 40vh;
+`
+
+export { CartStyle, CartProduct, EmptyCart }
