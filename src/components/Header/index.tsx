@@ -5,7 +5,7 @@ import { useContext } from "react"
 import { CartContext } from "@/context/CartContext"
 
 const Header = () => {
-    const { opened, setOpened } = useContext(CartContext)
+    const { setOpened, cartLength } = useContext(CartContext)
 
     return (
         <HeaderStyle>
@@ -14,7 +14,8 @@ const Header = () => {
                 <p>Sistemas</p>
             </div>
             <button onClick={() => setOpened(true)}>
-                <MdShoppingCart /> <span>0</span>
+                <MdShoppingCart />
+                <span>{cartLength}</span>
             </button>
         </HeaderStyle>
     )
