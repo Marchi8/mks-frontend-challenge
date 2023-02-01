@@ -2,7 +2,6 @@
 import { CartContext } from "@/context/CartContext"
 import { useContext } from "react"
 import { CartProduct, CartStyle } from "./styles"
-// import { motion } from "framer-motion"
 
 const Cart = () => {
     const { opened, setOpened } = useContext(CartContext)
@@ -18,40 +17,34 @@ const Cart = () => {
                 </div>
                 <ul>
                     <CartProduct>
-                        <button>X</button>
+                        <button className="remove-button">x</button>
                         <img src="https://a-static.mlcdn.com.br/800x560/apple-watch-series-3-gps-38mm-caixa-prateada-aluminio-pulseira-esportiva-branca/magazineluiza/221516100/8470884401472de39dfa9f9d379e0cc9.jpg" alt="" />
-                        <p>Título</p>
-                        <div>
-                            <p>- 1 +</p>
+                        <h4>Apple Watch Series 4 GPS</h4>
+                        <aside>
+                            <div>
+                                <button>-</button>
+                                <div className="vertical-line">.</div>
+                                <p>1</p>
+                                <div className="vertical-line">.</div>
+                                <button>+</button>
+                            </div>
                             <span>R$399</span>
-                        </div>
+                        </aside>
                     </CartProduct>
                     <CartProduct>
-                        <button>X</button>
+                        <button className="remove-button">x</button>
                         <img src="https://a-static.mlcdn.com.br/800x560/apple-watch-series-3-gps-38mm-caixa-prateada-aluminio-pulseira-esportiva-branca/magazineluiza/221516100/8470884401472de39dfa9f9d379e0cc9.jpg" alt="" />
-                        <p>Título</p>
-                        <div>
-                            <p>- 1 +</p>
+                        <h4>Apple Watch Series 4 GPS</h4>
+                        <aside>
+                            <div>
+                                <button>-</button>
+                                <div className="vertical-line">.</div>
+                                <p>1</p>
+                                <div className="vertical-line">.</div>
+                                <button>+</button>
+                            </div>
                             <span>R$399</span>
-                        </div>
-                    </CartProduct>
-                    <CartProduct>
-                        <button>X</button>
-                        <img src="https://a-static.mlcdn.com.br/800x560/apple-watch-series-3-gps-38mm-caixa-prateada-aluminio-pulseira-esportiva-branca/magazineluiza/221516100/8470884401472de39dfa9f9d379e0cc9.jpg" alt="" />
-                        <p>Título</p>
-                        <div>
-                            <p>- 1 +</p>
-                            <span>R$399</span>
-                        </div>
-                    </CartProduct>
-                    <CartProduct>
-                        <button>X</button>
-                        <img src="https://a-static.mlcdn.com.br/800x560/apple-watch-series-3-gps-38mm-caixa-prateada-aluminio-pulseira-esportiva-branca/magazineluiza/221516100/8470884401472de39dfa9f9d379e0cc9.jpg" alt="" />
-                        <p>Título</p>
-                        <div>
-                            <p>- 1 +</p>
-                            <span>R$399</span>
-                        </div>
+                        </aside>
                     </CartProduct>
                 </ul>
                 <section>
