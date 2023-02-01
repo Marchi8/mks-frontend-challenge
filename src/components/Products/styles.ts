@@ -29,6 +29,7 @@ const ProductsStyle = styled.div`
             flex-direction: row;
             justify-content: center;
             flex-wrap: wrap;
+            gap: 15px;
         }
 
         // CONFIGURAÇÃO PARA ESCONDER O SCROLLBAR
@@ -58,11 +59,17 @@ const ProductsStyle = styled.div`
     }
 
     li>img{
-        width: 240px;
+        width: 180px;
         height: 158.82px;
         margin-top: 20px;
-        margin-left: 5px;
-        margin-bottom: 16px;
+        margin-left: 30px;
+
+        @media(min-width:1000px) {
+            width: 150px;
+            height: 138px;
+            margin-top: 0px;
+            margin-bottom: 14px;
+        }
     }
 
     li>div{
@@ -71,7 +78,12 @@ const ProductsStyle = styled.div`
         flex-direction: row;
         gap: 10px;
         margin-left: 12px;
-        margin-bottom: 9px;
+
+        @media(min-width:1000px) {
+            margin-left: 9px;
+            gap: 7px;
+            margin-bottom: 0px;
+        }
     }
 
     li>div>h4{
@@ -82,6 +94,11 @@ const ProductsStyle = styled.div`
         font-size: 16px;
         width: 142.77px;
         height: 43.73px;
+
+        @media(min-width:1000px) {
+            width: 131px;
+            height: 38px;
+        }
     }
 
     li>div>span{
@@ -97,6 +114,11 @@ const ProductsStyle = styled.div`
         display: flex;
         align-items: center;
         justify-content: center;
+
+        @media(min-width:1000px) {
+            width: 64px;
+            height: 26px;
+        }
     }
 
     li>p{
@@ -108,7 +130,13 @@ const ProductsStyle = styled.div`
         font-weight: 300;
         font-size: 10px;
         margin-left: 12px;
-        margin-bottom: 11px;
+        margin-bottom: 29px;
+
+        @media(min-width:1000px) {
+            width: 192px;
+            height: 25px;
+            margin-bottom: 35px;
+        }
     }
 
     li>button{

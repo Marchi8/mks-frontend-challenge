@@ -1,83 +1,31 @@
 "use client"
 import { ProductsStyle } from "./styles"
 import { FiShoppingBag } from "react-icons/fi"
+import { ProductContext } from "@/context/ProductsContext"
+import { useContext, useEffect } from "react"
+import { useDispatch, useSelector } from "react-redux"
+import addProductsThunk from "@/store/modules/products/thunk"
 
 const Products = () => {
+    const { productsList } = useContext(ProductContext)
+    // const dispatch = useDispatch();
+
+    // const { products }: any = useSelector((store) => store);
+    // const { products }: any = useSelector((store) => store);
     return (
         <ProductsStyle>
             <ul>
-                <li>
-                    <img src="https://a-static.mlcdn.com.br/800x560/apple-watch-series-3-gps-38mm-caixa-prateada-aluminio-pulseira-esportiva-branca/magazineluiza/221516100/8470884401472de39dfa9f9d379e0cc9.jpg" alt="" />
-                    <div>
-                        <h4>Apple Watch Series 4 GPS</h4>
-                        <span>R$399</span>
-                    </div>
-                    <p>Redesigned from scratch and completely revised.</p>
-                    <button><FiShoppingBag /> COMPRAR</button>
-                </li>
-                <li>
-                    <img src="https://a-static.mlcdn.com.br/800x560/apple-watch-series-3-gps-38mm-caixa-prateada-aluminio-pulseira-esportiva-branca/magazineluiza/221516100/8470884401472de39dfa9f9d379e0cc9.jpg" alt="" />
-                    <div>
-                        <h4>Apple Watch Series 4 GPS</h4>
-                        <span>R$399</span>
-                    </div>
-                    <p>Redesigned from scratch and completely revised.</p>
-                    <button><FiShoppingBag /> COMPRAR</button>
-                </li>
-                <li>
-                    <img src="https://a-static.mlcdn.com.br/800x560/apple-watch-series-3-gps-38mm-caixa-prateada-aluminio-pulseira-esportiva-branca/magazineluiza/221516100/8470884401472de39dfa9f9d379e0cc9.jpg" alt="" />
-                    <div>
-                        <h4>Apple Watch Series 4 GPS</h4>
-                        <span>R$399</span>
-                    </div>
-                    <p>Redesigned from scratch and completely revised.</p>
-                    <button><FiShoppingBag /> COMPRAR</button>
-                </li>
-                <li>
-                    <img src="https://a-static.mlcdn.com.br/800x560/apple-watch-series-3-gps-38mm-caixa-prateada-aluminio-pulseira-esportiva-branca/magazineluiza/221516100/8470884401472de39dfa9f9d379e0cc9.jpg" alt="" />
-                    <div>
-                        <h4>Apple Watch Series 4 GPS</h4>
-                        <span>R$399</span>
-                    </div>
-                    <p>Redesigned from scratch and completely revised.</p>
-                    <button><FiShoppingBag /> COMPRAR</button>
-                </li>
-                <li>
-                    <img src="https://a-static.mlcdn.com.br/800x560/apple-watch-series-3-gps-38mm-caixa-prateada-aluminio-pulseira-esportiva-branca/magazineluiza/221516100/8470884401472de39dfa9f9d379e0cc9.jpg" alt="" />
-                    <div>
-                        <h4>Apple Watch Series 4 GPS</h4>
-                        <span>R$399</span>
-                    </div>
-                    <p>Redesigned from scratch and completely revised.</p>
-                    <button><FiShoppingBag /> COMPRAR</button>
-                </li>
-                <li>
-                    <img src="https://a-static.mlcdn.com.br/800x560/apple-watch-series-3-gps-38mm-caixa-prateada-aluminio-pulseira-esportiva-branca/magazineluiza/221516100/8470884401472de39dfa9f9d379e0cc9.jpg" alt="" />
-                    <div>
-                        <h4>Apple Watch Series 4 GPS</h4>
-                        <span>R$399</span>
-                    </div>
-                    <p>Redesigned from scratch and completely revised.</p>
-                    <button><FiShoppingBag /> COMPRAR</button>
-                </li>
-                <li>
-                    <img src="https://a-static.mlcdn.com.br/800x560/apple-watch-series-3-gps-38mm-caixa-prateada-aluminio-pulseira-esportiva-branca/magazineluiza/221516100/8470884401472de39dfa9f9d379e0cc9.jpg" alt="" />
-                    <div>
-                        <h4>Apple Watch Series 4 GPS</h4>
-                        <span>R$399</span>
-                    </div>
-                    <p>Redesigned from scratch and completely revised.</p>
-                    <button><FiShoppingBag /> COMPRAR</button>
-                </li>
-                <li>
-                    <img src="https://a-static.mlcdn.com.br/800x560/apple-watch-series-3-gps-38mm-caixa-prateada-aluminio-pulseira-esportiva-branca/magazineluiza/221516100/8470884401472de39dfa9f9d379e0cc9.jpg" alt="" />
-                    <div>
-                        <h4>Apple Watch Series 4 GPS</h4>
-                        <span>R$399</span>
-                    </div>
-                    <p>Redesigned from scratch and completely revised.</p>
-                    <button><FiShoppingBag /> COMPRAR</button>
-                </li>
+                {productsList.map((product: any, index: number) => (
+                    <li key={index}>
+                        <img src={product.photo} alt="" />
+                        <div>
+                            <h4>{product.name}</h4>
+                            <span>R${parseInt(product.price).toFixed(0)}</span>
+                        </div>
+                        <p>{product.description}</p>
+                        <button><FiShoppingBag /> COMPRAR</button>
+                    </li>
+                ))}
             </ul>
         </ProductsStyle>
     )

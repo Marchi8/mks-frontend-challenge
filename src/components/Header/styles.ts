@@ -8,6 +8,7 @@ const HeaderStyle = styled.aside`
     align-items: center;
     justify-content: space-around;
     gap: 70px;
+    z-index: 1;
     
     @media(min-width:1000px) {
         height: 101px;

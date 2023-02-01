@@ -2,11 +2,10 @@
 import { CartContext } from "@/context/CartContext"
 import { useContext } from "react"
 import { CartProduct, CartStyle } from "./styles"
-import { motion } from "framer-motion"
+// import { motion } from "framer-motion"
 
 const Cart = () => {
     const { opened, setOpened } = useContext(CartContext)
-    console.log(opened)
     return (
         opened ?
             <CartStyle>
