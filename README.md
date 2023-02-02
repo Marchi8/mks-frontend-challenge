@@ -19,25 +19,56 @@ Use do Jest e a testing-library para realizar os testes unitários.
 Recursos
 ---------------
 
+Notion utilizado para organizar as tarefas: [Desafio Front End MKS](https://garnet-airplane-d78.notion.site/0e5ea3f8d762425883a9a30d8c1e155a?v=c7ec2865453a444da9fe8940a56d2c89)
+
 UI/UX: [Figma loja](https://www.figma.com/file/Z4z8osDbK1ET7cjNzFRMrK/MKS-Front-end-challenge?node-id=0%3A1) PS: O design system está incluso, incluindo a fonte.
 
 API: [API REST de produtos](https://mks-challenge-api-frontend.herokuapp.com/api-docs/) para exibir a lista de produtos da loja.
 
-Ferramentas requeridas
+Ferramentas utilizadas
 ---------------
 
 1. TypeScript
-2. React ou Next.js (Preferimos Next.js)
+2. Next.js
 3. Redux toolkit
 4. Styled-components
 5. Jest
+6. React-Icons
+7. Vercel
+8. Figma
+9. Notion
+10. Axios
 
-Aspectos técnicos
----------------
+# Como testar a aplicação:
 
-Todas as ferramentas listadas anteriormente são mandatórias, além delas sinta-se livre para utilizar de qualquer outra technologia que te seja confortável.
+1. Faça o clone do repositório;
+```shell
+git clone url 
+```
 
-Faça o deploy!
----------------
+2. Instale as dependências necessárias:
+```shell
+yarn 
+```
 
-Ao finalizar, faça o deploy no lugar que te for confortável (exemplo: Vercel, Netlify, Heroku, Amazon EC2, etc)
+3. Rode os testes:
+```shell
+yarn test
+```
+
+# Como utilizar a aplicação localmente:
+
+1. Faça o clone do repositório;
+```shell
+git clone url 
+```
+
+2. Instale as dependências necessárias:
+```shell
+yarn 
+```
+
+3. Inicie a aplicação:
+```shell
+yarn dev
+```

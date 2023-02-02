@@ -38,7 +38,7 @@ const ProductsStyle = styled.div`
         }
     }
 
-    li{
+    #skelleton{
         background-color: #FFFFFF;
         list-style: none; 
         width: 251px;
@@ -48,6 +48,7 @@ const ProductsStyle = styled.div`
         box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.135216);
         border-radius: 8px; 
         display: inline-block;
+        font-size: 0px;
 
         @media(min-width:1000px) {
             margin-left: 10px;
@@ -58,7 +59,7 @@ const ProductsStyle = styled.div`
         }
     }
 
-    li>img{
+    #skelleton>img{
         width: 180px;
         height: 158.82px;
         margin-top: 20px;
@@ -72,7 +73,7 @@ const ProductsStyle = styled.div`
         }
     }
 
-    li>div{
+    #skelleton>div{
         display: flex;
         align-items: flex-start;
         flex-direction: row;
@@ -86,7 +87,7 @@ const ProductsStyle = styled.div`
         }
     }
 
-    li>div>h4{
+    #skelleton>div>h4{
         color: #2C2C2C;
         font-family: 'Montserrat';
         font-style: normal;
@@ -101,7 +102,7 @@ const ProductsStyle = styled.div`
         }
     }
 
-    li>div>span{
+    #skelleton>div>span{
         background-color: #373737;
         color: #FFFFFF;
         border-radius: 5px;
@@ -121,7 +122,7 @@ const ProductsStyle = styled.div`
         }
     }
 
-    li>p{
+    #skelleton>p{
         color: #2C2C2C;
         width: 221.06px;
         height: 28.77px;
@@ -135,11 +136,11 @@ const ProductsStyle = styled.div`
         @media(min-width:1000px) {
             width: 192px;
             height: 25px;
-            margin-bottom: 35px;
+            margin-bottom: 38px;
         }
     }
 
-    li>button{
+    #skelleton>button{
         background-color: #0F52BA;
         color: #FFFFFF;
         border: 2px solid #0F52BA;

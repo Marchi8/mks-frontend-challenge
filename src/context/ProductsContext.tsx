@@ -31,7 +31,7 @@ function ProductProvider({ children }: IProductProps) {
     useEffect(() => {
         API.get("")
             .then(res => {
-                setProductsList(res.data.products)
+                setTimeout(() => setProductsList(res.data.products), 1000)
             })
             .catch(err => alert(err))
     }, [])
