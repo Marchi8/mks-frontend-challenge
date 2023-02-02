@@ -1,3 +1,6 @@
+## Você pode testar o app aqui: 
+https://mks-frontend-challenge-plum.vercel.app/
+
 Diretrizes do desafio
 ===========================
 
