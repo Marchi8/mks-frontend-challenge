@@ -1,5 +1,5 @@
 "use client"
-import { CartContext, ICartProducts } from "@/context/CartContext"
+import { CartContext, ICartProducts } from "../../context/CartContext"
 import { useContext } from "react"
 import { CartProduct, CartStyle, EmptyCart } from "./styles"
 import { AiFillShopping } from "react-icons/ai"
@@ -36,11 +36,11 @@ const Cart = () => {
                                 <h4>{product.name}</h4>
                                 <aside>
                                     <div>
-                                        <button onClick={() => decreaseQuantityFunc(product)}>-</button>
+                                        <button data-testid="decrease-quantity" onClick={() => decreaseQuantityFunc(product)}>-</button>
                                         <div className="vertical-line">.</div>
                                         <p>{product.quantity}</p>
                                         <div className="vertical-line">.</div>
-                                        <button onClick={() => increaseQuantityFunc(product)}>+</button>
+                                        <button data-testid="increase-quantity" onClick={() => increaseQuantityFunc(product)}>+</button>
                                     </div>
                                     <span>
                                         R${parseInt(product.price).toFixed(0)}

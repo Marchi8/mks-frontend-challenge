@@ -1,9 +1,10 @@
 "use client"
 import { ProductsStyle } from "./styles"
 import { FiShoppingBag } from "react-icons/fi"
-import { ProductContext } from "@/context/ProductsContext"
+import { ProductContext } from "../../context/ProductsContext"
 import { useContext } from "react"
-import { CartContext } from "@/context/CartContext"
+import { CartContext } from "../../context/CartContext"
+import ProductCard from "../ProductCard"
 
 const Products = () => {
     const { productsList } = useContext(ProductContext)
@@ -12,16 +13,8 @@ const Products = () => {
     return (
         <ProductsStyle>
             <ul>
-                {productsList.map((product: any, index: number) => (
-                    <li key={index}>
-                        <img src={product.photo} alt="" />
-                        <div>
-                            <h4>{product.name}</h4>
-                            <span>R${parseInt(product.price).toFixed(0)}</span>
-                        </div>
-                        <p>{product.description}</p>
-                        <button onClick={() => addProductToCartFunc(product)}><FiShoppingBag />COMPRAR</button>
-                    </li>
+                {productsList.map((product: any) => (
+                    <ProductCard key={product.id} product={product} />
                 ))}
             </ul>
         </ProductsStyle>
