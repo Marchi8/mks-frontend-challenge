@@ -1,65 +1,26 @@
 import styled from "styled-components";
 
-const ProductsStyle = styled.div`
-    width: 100vw;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
+const CardStyle = styled.li`
+    background-color: #FFFFFF;
+    list-style: none; 
+    width: 251px;
+    height: 328px;
+    margin-bottom: 18px;
+    color: #2C2C2C;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.135216);
+    border-radius: 8px; 
+    display: inline-block;
 
     @media(min-width:1000px) {
-        align-items: center;
-        height: 85vh;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 0px;
+        width: 217.56px;
+        height: 285px;
     }
 
-    ul{
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        width: 99vw;
-        overflow-y: auto;
-        height: 90vh;
-        padding: 18px;
-        
-        @media(min-width:1000px) {
-            padding: 0px;
-            width: 999px;
-            height: 601px;
-            display: flex;
-            align-items: center;
-            flex-direction: row;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
 
-        // CONFIGURAÇÃO PARA ESCONDER O SCROLLBAR
-        ::-webkit-scrollbar{
-            display: none;
-        }
-    }
-
-    #skelleton{
-        background-color: #FFFFFF;
-        list-style: none; 
-        width: 251px;
-        height: 328px;
-        margin-bottom: 18px;
-        color: #2C2C2C;
-        box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.135216);
-        border-radius: 8px; 
-        display: inline-block;
-        font-size: 0px;
-
-        @media(min-width:1000px) {
-            margin-left: 10px;
-            margin-right: 10px;
-            margin-bottom: 0px;
-            width: 217.56px;
-            height: 285px;
-        }
-    }
-
-    #skelleton>img{
+    img{
         width: 180px;
         height: 158.82px;
         margin-top: 20px;
@@ -73,7 +34,7 @@ const ProductsStyle = styled.div`
         }
     }
 
-    #skelleton>div{
+    div{
         display: flex;
         align-items: flex-start;
         flex-direction: row;
@@ -87,7 +48,7 @@ const ProductsStyle = styled.div`
         }
     }
 
-    #skelleton>div>h4{
+    div>h4{
         color: #2C2C2C;
         font-family: 'Montserrat';
         font-style: normal;
@@ -102,7 +63,7 @@ const ProductsStyle = styled.div`
         }
     }
 
-    #skelleton>div>span{
+    div>span{
         background-color: #373737;
         color: #FFFFFF;
         border-radius: 5px;
@@ -122,7 +83,7 @@ const ProductsStyle = styled.div`
         }
     }
 
-    #skelleton>p{
+    p{
         color: #2C2C2C;
         width: 221.06px;
         height: 28.77px;
@@ -136,11 +97,11 @@ const ProductsStyle = styled.div`
         @media(min-width:1000px) {
             width: 192px;
             height: 25px;
-            margin-bottom: 38px;
+            margin-bottom: 35px;
         }
     }
 
-    #skelleton>button{
+    button{
         background-color: #0F52BA;
         color: #FFFFFF;
         border: 2px solid #0F52BA;
@@ -171,4 +132,4 @@ const ProductsStyle = styled.div`
     }
 `
 
-export { ProductsStyle }
+export { CardStyle }
