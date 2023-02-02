@@ -40,7 +40,7 @@ const cartReducer = createSlice({
             if (state.cartProducts[productIndex].quantity > 1) {
                 state.cartProducts[productIndex].quantity--
             } else {
-                state.cartProducts.splice(productIndex)
+                state.cartProducts.splice(productIndex, 1)
             }
         },
 
@@ -52,7 +52,7 @@ const cartReducer = createSlice({
                 parseFloat(state.cartProducts[productIndex].price) *
                 state.cartProducts[productIndex].quantity
             state.cartLength -= state.cartProducts[productIndex].quantity
-            state.cartProducts.splice(productIndex)
+            state.cartProducts.splice(productIndex, 1)
         },
     }
 })

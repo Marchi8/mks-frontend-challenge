@@ -4,7 +4,7 @@ import {
     addProductToCart,
     reduceAmount,
     removeProduct
-} from "@/store/modules/reducer";
+} from "../store/modules/reducer";
 import { ReactNode, useState } from "react";
 import { createContext } from "react";
 import { useDispatch, useSelector } from "react-redux";

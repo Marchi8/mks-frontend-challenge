@@ -1,5 +1,5 @@
 "use client"
-import { API } from "@/api";
+import { API } from "../api";
 import { ReactNode, useEffect, useState } from "react";
 import { createContext } from "react";
 
