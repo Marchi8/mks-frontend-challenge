@@ -1,16 +1,13 @@
-import { CartContext, ICartProducts } from "../../context/CartContext"
+import { CartContext } from "../../context/CartContext"
 import { useContext } from "react"
 import { FiShoppingBag } from "react-icons/fi"
+import { CardStyle } from "./styles";
 
-export interface ICard {
-    product: any;
-}
-
-const ProductCard = ({ product }: ICard) => {
+const ProductCard = ({ product }: any) => {
     const { addProductToCartFunc } = useContext(CartContext)
 
     return (
-        <li key={product.id}>
+        <CardStyle key={product.id}>
             <img src={product.photo} alt="" />
             <div>
                 <h4>{product.name}</h4>
@@ -18,7 +15,7 @@ const ProductCard = ({ product }: ICard) => {
             </div>
             <p>{product.description}</p>
             <button data-testid="buy" onClick={() => addProductToCartFunc(product)}><FiShoppingBag />COMPRAR</button>
-        </li>
+        </CardStyle>
     )
 }
 
